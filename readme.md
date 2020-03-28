@@ -6,7 +6,7 @@ This is an unoffical repository for reproducing model DMFN from the paper [[Imag
   <img src="imgs/DMFN.png">
 </p>
 
-# Prerequisites
+## Prerequisites
 - Python3.5 (or higher)
 - pytorch 1.0(or higher) with GPU
 - numpy
@@ -24,7 +24,7 @@ Note that the following result maybe not as good as the paper because **they are
 
 ### test
 <p align="center">
-  <img src="imgs/train_result.png">
+  <img src="imgs/test_result.png">
 </p>
 
 ### loss
@@ -52,3 +52,8 @@ Use train.py as the following
 python train.py ---dataset_path celeba_data --data_file img_align_celeba_png\test.txt --batch_size 8 --lr 2e-4
 ```
 You can load the pretrained model by the option --load_model_dir too.
+
+## TODO
+
+- [ ] 中文博客
+- [ ] upload pretrained model

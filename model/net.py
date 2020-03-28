@@ -46,9 +46,9 @@ class DMFB(nn.Module):
         return out
 
 
-class DFBN(BaseNet):
+class DMFN(BaseNet):
     def __init__(self):
-        super(DFBN, self).__init__()
+        super(DMFN, self).__init__()
         # 不需要激活函数？
         self.basemodel = nn.Sequential(
             nn.Conv2d(4, 64, 5, 1, 2),
@@ -169,7 +169,7 @@ class InpaintingModel_DFBM(BaseModel):
 
         self.confidence_mask_layer = ConfidenceDrivenMaskLayer()
 
-        self.netDFBN = DFBN().cuda()
+        self.netDFBN = DMFN().cuda()
         init_weights(self.netDFBN)
         self.model_names = ['DFBN']
         if self.opt.phase == 'test':
