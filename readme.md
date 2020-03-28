@@ -24,7 +24,7 @@ Note that the following result maybe not as good as the paper because **they are
 
 ### test
 <p align="center">
-  <img src="imgs/train_result.png">
+  <img src="imgs/test_result.png">
 </p>
 
 ### loss
