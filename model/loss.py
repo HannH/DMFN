@@ -44,9 +44,9 @@ class VGGLoss(nn.Module):
         self.feat_vgg_layers = ['relu{}_1'.format(x + 1) for x in range(5)]
         self.lambda_loss = 25
         self.gamma_loss = 1
-        self.align_loss,self.guided_loss,self.fm_vgg_loss=None,None,None
+        self.align_loss, self.guided_loss, self.fm_vgg_loss = None, None, None
         self.avg_pool = nn.AvgPool2d(2, 2)
-        self.coord_y, self.coord_x = torch.meshgrid(torch.arange(16), torch.arange(16))
+        self.coord_y, self.coord_x = torch.meshgrid(torch.arange(-1, 1, 1 / 8), torch.arange(-1, 1, 1 / 8))
         self.coord_y, self.coord_x = self.coord_y.cuda(), self.coord_x.cuda()
 
     def sum_normalize(self, featmaps):
@@ -77,7 +77,7 @@ class VGGLoss(nn.Module):
     def calc_align_loss(self, gen, tar):
         def sum_u_v(x):
             area = x.shape[-2] * x.shape[-1]
-            return torch.sum(x.view(-1, area), -1)+1e-7
+            return torch.sum(x.view(-1, area), -1) + 1e-7
 
         sum_gen = sum_u_v(gen)
         sum_tar = sum_u_v(tar)

@@ -106,7 +106,7 @@ class TrainOptions:
 
         # model name and date
         self.opt.date_str = time.strftime('%Y%m%d-%H%M%S')
-        self.opt.model_name = 'GMCNN'
+        self.opt.model_name = 'DMFN'
         self.opt.model_folder = self.opt.date_str + '_' + self.opt.model_name
         # self.opt.model_folder += '_' + self.opt.dataset
         # self.opt.model_folder += '_b' + str(self.opt.batch_size)
