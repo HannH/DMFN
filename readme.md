@@ -32,8 +32,6 @@ Note that the following result maybe not as good as the paper because **they are
   <img src="imgs/loss_curve.png">
 </p>
 
-[picture for loss]
-
 ## Prepair the dataset
 Download the dataset of [celebA](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html), unzip  and split it to test/train dataset (or you can use my train/test file in CelebA/ ).
 
@@ -55,5 +53,7 @@ You can load the pretrained model by the option --load_model_dir too.
 
 ## TODO
 
-- [ ] 中文博客
-- [ ] upload pretrained model
+- [x] 中文博客(https://blog.csdn.net/h8832077/article/details/105166776)
+- [x] upload pretrained model
+    you can download pretrained model here
+    ([baidu netdisk](https://pan.baidu.com/s/13HnUraFDxNWDZICObV-CRQ): ozpo)
